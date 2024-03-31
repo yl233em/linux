@@ -2,4 +2,4 @@ myproc:myproc.c
 	gcc myproc.c -o myproc
 .PHONY:clean
 clean:
-	rm myproc
+	rm -f myproc
