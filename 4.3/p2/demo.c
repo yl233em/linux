@@ -16,6 +16,7 @@ int main()
 		while(1)
 		{
 			printf("pid = %d, ppid = %d  我一直玩！\n", getpid(), getppid());
+			sleep(1);
 		}
 	}
 	else{
