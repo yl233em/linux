@@ -14,7 +14,7 @@ int main()
 		}
 
 	}
-	else
+	else//子进程
 	{
 		if(pid == 0)
 		{
