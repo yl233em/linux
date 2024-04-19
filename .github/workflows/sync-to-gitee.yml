@@ -16,7 +16,7 @@ jobs:
       - name: Mirror to Gitee
         env:
           GITEE_REPO_URL: ${{ secrets.GITEE_REPO_URL }}
-          GITEE_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
         run: |
           git remote add gitee $GITEE_REPO_URL
           git push --mirror gitee
