@@ -1,1 +1,22 @@
+name: Sync Repository to Gitee
 
+on:
+  push:
+    branches:
+      - main  # 或者你希望同步的分支名
+
+jobs:
+  sync-to-gitee:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Mirror to Gitee
+        env:
+          GITEE_REPO_URL: ${{ secrets.GITEE_REPO_URL }}
+          GITEE_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+        run: |
+          git remote add gitee $GITEE_REPO_URL
+          git push --mirror gitee
