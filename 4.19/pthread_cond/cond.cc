@@ -18,6 +18,7 @@ int main()
     pthread_mutex_init(&mutex, nullptr);
 
     pthread_t tids[TNUM];
+    
 
     return 0;
 }
